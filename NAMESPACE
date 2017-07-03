@@ -2,3 +2,4 @@
 
 export("%!in%")
 export("%out%")
+export(rtable)
