@@ -18,20 +18,20 @@
 #' x1 <- sort(rgeom(100, prob = 0.5))
 #' y <- table(x1)
 #' y
-#' x2 <- rtable(y)
+#' x2 <- uncount(y)
 #' x2 <- as.integer(as.character(x2))
 #' identical(x1, x2)
 #'
 #' require(MASS)
 #' x <- data.frame(label = c(1, 2, 3, 4, 6, 9),
 #'                 count = c(4, 7, 4, 1, 1, 1))
-#' x <- rtable(x)
+#' x <- uncount(x)
 #' res <- fitdistr(x, "Poisson")
 #' res
 #'
 #' @export
 #------------------------------------------------------------------------------#
-rtable <- function(x) {
+uncount <- function(x) {
     if (is.data.frame(x)) {
         stopifnot(ncol(x) == 2)
         stopifnot(is.numeric(x[, 2]))
