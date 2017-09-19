@@ -28,6 +28,8 @@ y <- table(x1)
 y
 x2 <- uncount(y)
 x2 <- as.integer(as.character(x2))
+# More efficient, but harder to remember:
+# x2 <- as.integer(levels(x2)[as.integer(x2)])
 identical(x1, x2)
 
 require(MASS)

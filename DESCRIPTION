@@ -1,12 +1,17 @@
 Package: cgmisc
 Type: Package
 Title: CGigot Miscellaneous
-Version: 0.0.0.9000
+Version: 0.1.0.9000
 Authors@R: as.person("Christophe Gigot <ch.gigot@gmail.com> [aut, cre]")
 Description: The cgmisc package contains functions useful for data analysis and
     utility operations.
+Imports:
+    magrittr,
+    tidyverse,
+    xml2
 Suggests:
-    MASS
+    MASS,
+    rvest
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

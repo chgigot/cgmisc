@@ -3,5 +3,7 @@
 #'
 #' @docType package
 #' @name cgmisc
+#' @import ggplot2
+#' @importFrom magrittr %>%
 #------------------------------------------------------------------------------#
 NULL
