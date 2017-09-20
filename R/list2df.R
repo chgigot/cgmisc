@@ -5,7 +5,9 @@
 #'
 #' @param x A list. Each element corresponds to a row of the upcoming data frame.
 #' @param col_names Optional. If not provided and if the first list element is
-#' a named vector, this vector is used to name the columns of the data frame.
+#'     a named vector, this vector is used to name the columns of the data frame.
+#' @param stringsAsFactors Logical. Should the character vector be converted to
+#'     a factor?
 #'
 #' @examples
 #' my_list <- list(c(23, 21, 41), c(3, 55), 8, c(39, 31, 14))
@@ -26,9 +28,11 @@
 #'
 #' @export
 #------------------------------------------------------------------------------#
-list2df <- function(x, col_names, ...) {
+list2df <- function(x, col_names, ...,
+                    stringsAsFactors = default.stringsAsFactors()) {
     seq_max <- seq_len(max(lengths(x)))
-    res     <- as.data.frame.matrix(t(sapply(x, "[", i = seq_max)), ...)
+    res     <- as.data.frame.matrix(t(sapply(x, "[", i = seq_max)), ...,
+                                    stringsAsFactors = stringsAsFactors)
     if (!missing(col_names)) {
         setNames(res, col_names)
     } else if (!is.null(col_names <- names(x[[1]]))) {

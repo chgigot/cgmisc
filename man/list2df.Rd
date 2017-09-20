@@ -4,13 +4,16 @@
 \alias{list2df}
 \title{Coerce a list of rows to a data frame}
 \usage{
-list2df(x, col_names, ...)
+list2df(x, col_names, ..., stringsAsFactors = default.stringsAsFactors())
 }
 \arguments{
 \item{x}{A list. Each element corresponds to a row of the upcoming data frame.}
 
 \item{col_names}{Optional. If not provided and if the first list element is
 a named vector, this vector is used to name the columns of the data frame.}
+
+\item{stringsAsFactors}{Logical. Should the character vector be converted to
+a factor?}
 }
 \description{
 Function to coerce a list (of rows) to a data frame.
