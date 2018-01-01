@@ -2,8 +2,10 @@
 
 S3method(plot,impact_factor)
 export("%!in%")
+export("%in_between%")
 export("%out%")
 export(collect_impact_factor)
+export(in_between)
 export(list2df)
 export(uncount)
 export(verybasename)
