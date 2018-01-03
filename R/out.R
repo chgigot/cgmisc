@@ -28,7 +28,7 @@
 #'
 #' @export
 #------------------------------------------------------------------------------#
-in_between <- function(x, bounds, inclusive_left = TRUE, inclusive_right = TRUE) {
+in_between <- function(x, bounds, inclusive = TRUE) { # inclusive = c(left = TRUE, right = TRUE)) ???
     stopifnot(is.numeric(x))
     stopifnot(is.numeric(bounds))
     stopifnot(bounds[1] <= bounds[2])
@@ -44,8 +44,8 @@ in_between <- function(x, bounds, inclusive_left = TRUE, inclusive_right = TRUE)
 #' @rdname in_between
 #' @export
 #------------------------------------------------------------------------------#
-`%in_between%` <- function(x, bounds) {
-    in_between(x, bounds, inclusive_left = TRUE, inclusive_right = TRUE)
+`%in_between%` <- function(x, bounds, inclusive = TRUE) {
+    in_between(x, bounds, inclusive)
 }
 
 
