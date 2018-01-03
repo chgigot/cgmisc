@@ -5,7 +5,7 @@
 \alias{\%in_between\%}
 \title{Is a value within an interval?}
 \usage{
-in_between(x, bounds, inclusive_left = TRUE, inclusive_right = TRUE)
+in_between(x, bounds, inclusive = TRUE)
 
 x \%in_between\% bounds
 }
