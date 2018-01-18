@@ -4,16 +4,22 @@
 #' Closure to format numeric numbers for pretty printing.
 #'
 #' @param digits How many digits to be kept?
+#' @param lh_equ With leaf-hand side equal (or unequal) sign?
 #'
 #' @export
 #------------------------------------------------------------------------------#
-fmt <- function(digits = 3) {
+fmt <- function(digits = 3, lh_equal = TRUE) {
     function(x) {
         stopifnot(is.numeric(x))
         if ((x != 0) & (round(x, digits = digits) == 0)) {
             paste0("< ", 10^(-digits))
         } else {
-            format(round(x, digits = digits), nsmall = digits)
+            x <- format(round(x, digits = digits), nsmall = digits)
+            if (lh_equal) {
+                paste0("= ", x)
+            } else {
+                x
+            }
         }
     }
 }

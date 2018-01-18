@@ -4,10 +4,12 @@
 \alias{fmt}
 \title{Format real numbers for pretty printing.}
 \usage{
-fmt(digits = 3)
+fmt(digits = 3, lh_equal = TRUE)
 }
 \arguments{
 \item{digits}{How many digits to be kept?}
+
+\item{lh_equ}{With leaf-hand side equal (or unequal) sign?}
 }
 \description{
 Closure to format numeric numbers for pretty printing.
