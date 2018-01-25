@@ -4,7 +4,7 @@
 \alias{fmt}
 \title{Format real numbers for pretty printing.}
 \usage{
-fmt(digits = 3, lh_equal = TRUE)
+fmt(digits = 3)
 }
 \arguments{
 \item{digits}{How many digits to be kept?}

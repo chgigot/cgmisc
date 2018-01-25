@@ -8,8 +8,8 @@
 #'
 #' @export
 #------------------------------------------------------------------------------#
-fmt <- function(digits = 3, lh_equal = TRUE) {
-    function(x) {
+fmt <- function(digits = 3) {
+    function(x, lh_equal = TRUE) {
         stopifnot(is.numeric(x))
         if ((x != 0) & (round(x, digits = digits) == 0)) {
             paste0("< ", 10^(-digits))
