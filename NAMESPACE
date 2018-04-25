@@ -2,6 +2,8 @@
 
 S3method(plot,impact_factor)
 export("%!in%")
+export("%.%")
+export("%.%<-")
 export("%in_between%")
 export("%out%")
 export(chisq.test2)
